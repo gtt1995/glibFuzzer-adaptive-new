@@ -857,7 +857,6 @@ void Fuzzer::ReadAndExecuteSeedCorpora(std::vector<SizedFile> &CorporaFiles) {
     // so we add one fake input to the in-memory corpus.
     Corpus.AddToCorpus({'\n'}, /*NumFeatures=*/1, /*MayDeleteFile=*/true,
                        /*HasFocusFunction=*/false, /*NeverReduce=*/false,
-                       /*TimeOfUnit=duration_cast<microseconds>(0s), {0}, DFT,*/
                        /*TimeOfUnit=*/duration_cast<microseconds>(0s), {0}, DFT,
                        /*BaseII*/ nullptr);
   }

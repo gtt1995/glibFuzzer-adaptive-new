@@ -32,6 +32,9 @@ ATTRIBUTE_TARGET_POPCNT	FuzzerPlatform.h	92;"	d
 ATTRIBUTE_TARGET_POPCNT	FuzzerPlatform.h	94;"	d
 ATTRIBUTE_TARGET_POPCNT	FuzzerPlatform.h	97;"	d
 ActiveThreadCount	FuzzerUtilDarwin.cpp	/^static int ActiveThreadCount = 0;$/;"	m	namespace:fuzzer	file:
+AdaCorpus	FuzzerFork.cpp	/^  size_t AdaCorpus = 1;$/;"	m	struct:fuzzer::GlobalEnv	file:
+AdaTime	FuzzerFork.cpp	/^  size_t AdaTime = 10;$/;"	m	struct:fuzzer::GlobalEnv	file:
+AdaptiveConfig	FuzzerFork.cpp	/^  void AdaptiveConfig(size_t JobId) {$/;"	f	struct:fuzzer::GlobalEnv
 Add	FuzzerTracePC.h	/^  void Add(const uint8_t *Data, size_t Size) {$/;"	f	struct:fuzzer::MemMemTable
 AddFeature	FuzzerCorpus.h	/^  bool AddFeature(size_t Idx, uint32_t NewSize, bool Shrink) {$/;"	f	class:fuzzer::InputCorpus
 AddRareFeature	FuzzerCorpus.h	/^  void AddRareFeature(uint32_t Idx) {$/;"	f	class:fuzzer::InputCorpus
@@ -70,6 +73,7 @@ Basename	FuzzerIOWindows.cpp	/^std::string Basename(const std::string &Path) {$/
 BlockCoverage	FuzzerDataFlowTrace.h	/^class BlockCoverage {$/;"	c	namespace:fuzzer
 BlockIsEntry	dataflow/DataFlow.cpp	/^static inline bool BlockIsEntry(size_t BlockIdx) {$/;"	f	file:
 BlockIsEntry	dataflow/DataFlowCallbacks.cpp	/^static inline bool BlockIsEntry(size_t BlockIdx) {$/;"	f	file:
+BottleneckCounts	FuzzerFork.cpp	/^  size_t BottleneckCounts = 0;$/;"	m	struct:fuzzer::GlobalEnv	file:
 Bswap	FuzzerBuiltins.h	/^inline uint16_t Bswap(uint16_t x) { return __builtin_bswap16(x); }$/;"	f	namespace:fuzzer
 Bswap	FuzzerBuiltins.h	/^inline uint32_t Bswap(uint32_t x) { return __builtin_bswap32(x); }$/;"	f	namespace:fuzzer
 Bswap	FuzzerBuiltins.h	/^inline uint64_t Bswap(uint64_t x) { return __builtin_bswap64(x); }$/;"	f	namespace:fuzzer
@@ -125,10 +129,12 @@ Corpus	FuzzerInternal.h	/^  InputCorpus &Corpus;$/;"	m	class:fuzzer::Fuzzer
 CorpusDir	FuzzerFork.cpp	/^  std::string CorpusDir;$/;"	m	struct:fuzzer::FuzzJob	file:
 CorpusDirs	FuzzerFork.cpp	/^  std::vector<std::string> CorpusDirs;$/;"	m	struct:fuzzer::GlobalEnv	file:
 CorpusDistribution	FuzzerCorpus.h	/^  std::piecewise_constant_distribution<double> CorpusDistribution;$/;"	m	class:fuzzer::InputCorpus
+Count	FuzzerIO.h	/^  size_t Count;$/;"	m	struct:fuzzer::FeatureCount
 CounterToFeature	FuzzerTracePC.h	/^unsigned CounterToFeature(T Counter) {$/;"	f	namespace:fuzzer
 Cov	FuzzerFork.cpp	/^  std::set<uint32_t> Features, Cov;$/;"	m	struct:fuzzer::GlobalEnv	file:
 Cov	FuzzerMerge.h	/^  std::vector<uint32_t> Features, Cov;$/;"	m	struct:fuzzer::MergeFileInfo
 Coverage	FuzzerDataFlowTrace.h	/^   BlockCoverage Coverage;$/;"	m	class:fuzzer::DataFlowTrace
+CoverageAdd	FuzzerFork.cpp	/^  size_t CoverageAdd = 1;$/;"	m	struct:fuzzer::GlobalEnv	file:
 CoverageVector	FuzzerDataFlowTrace.h	/^  typedef std::vector<uint32_t> CoverageVector;$/;"	t	class:fuzzer::BlockCoverage
 CrashCallback	FuzzerLoop.cpp	/^void Fuzzer::CrashCallback() {$/;"	f	class:fuzzer::Fuzzer
 CrashHandler	FuzzerUtilFuchsia.cpp	/^void CrashHandler() {$/;"	f	namespace:fuzzer::__anon4
@@ -143,6 +149,7 @@ CrossOverUniformDist	FuzzerOptions.h	/^  bool CrossOverUniformDist = false;$/;"	
 CrossOverWith	FuzzerMutate.h	/^  const Unit *CrossOverWith = nullptr;$/;"	m	class:fuzzer::MutationDispatcher
 CtrlHandler	FuzzerUtilWindows.cpp	/^BOOL WINAPI CtrlHandler(DWORD dwCtrlType) {$/;"	f	namespace:fuzzer
 CurrentDictionaryEntrySequence	FuzzerMutate.h	/^  std::vector<DictionaryEntry *> CurrentDictionaryEntrySequence;$/;"	m	class:fuzzer::MutationDispatcher
+CurrentExecs	FuzzerFork.cpp	/^  size_t CurrentExecs = 1;$/;"	m	struct:fuzzer::GlobalEnv	file:
 CurrentFunc	dataflow/DataFlowCallbacks.cpp	/^static __thread size_t CurrentFunc;$/;"	v	file:
 CurrentMutatorSequence	FuzzerMutate.h	/^  std::vector<Mutator> CurrentMutatorSequence;$/;"	m	class:fuzzer::MutationDispatcher
 CurrentUnitData	FuzzerInternal.h	/^  uint8_t *CurrentUnitData = nullptr;$/;"	m	class:fuzzer::Fuzzer
@@ -177,6 +184,7 @@ DictionaryEntry	FuzzerDictionary.h	/^  DictionaryEntry() {}$/;"	f	class:fuzzer::
 DictionaryEntry	FuzzerDictionary.h	/^  DictionaryEntry(Word W) : W(W) {}$/;"	f	class:fuzzer::DictionaryEntry
 DictionaryEntry	FuzzerDictionary.h	/^  DictionaryEntry(Word W, size_t PositionHint)$/;"	f	class:fuzzer::DictionaryEntry
 DictionaryEntry	FuzzerDictionary.h	/^class DictionaryEntry {$/;"	c	namespace:fuzzer
+Different	FuzzerFork.cpp	/^  int Different = 0;$/;"	m	struct:fuzzer::GlobalEnv	file:
 DirName	FuzzerIOPosix.cpp	/^std::string DirName(const std::string &FileName) {$/;"	f	namespace:fuzzer
 DirName	FuzzerIOWindows.cpp	/^std::string DirName(const std::string &FileName) {$/;"	f	namespace:fuzzer
 DirPlusFile	FuzzerIO.cpp	/^std::string DirPlusFile(const std::string &DirPath,$/;"	f	namespace:fuzzer
@@ -272,13 +280,18 @@ FUZZER_FLAG_UNSIGNED	FuzzerDriver.cpp	82;"	d	file:
 FUZZER_INTERFACE_VISIBILITY	FuzzerInterface.h	31;"	d
 FUZZER_INTERFACE_VISIBILITY	FuzzerInterface.h	33;"	d
 FUZZER_INTERFACE_VISIBILITY	FuzzerInterface.h	73;"	d
+Feature	FuzzerIO.h	/^  uint32_t Feature;$/;"	m	struct:fuzzer::FeatureCount
+FeatureCount	FuzzerIO.h	/^struct FeatureCount {$/;"	s	namespace:fuzzer
+FeatureCounts	FuzzerFork.cpp	/^  std::vector<FeatureCount> FeatureCounts;$/;"	m	struct:fuzzer::GlobalEnv	file:
 FeatureDebug	FuzzerCorpus.h	/^  static const bool FeatureDebug = false;$/;"	m	class:fuzzer::InputCorpus
 FeatureFreqs	FuzzerCorpus.h	/^  std::vector<std::pair<uint32_t, uint16_t>> FeatureFreqs;$/;"	m	struct:fuzzer::InputInfo
 FeatureFrequencyThreshold	FuzzerCorpus.h	/^  size_t FeatureFrequencyThreshold;$/;"	m	struct:fuzzer::EntropicOptions
 Features	FuzzerFork.cpp	/^  std::set<uint32_t> Features, Cov;$/;"	m	struct:fuzzer::GlobalEnv	file:
+Features	FuzzerIO.h	/^  std::vector<uint32_t> Features;$/;"	m	struct:fuzzer::SizeFeaturedFile
 Features	FuzzerMerge.h	/^  std::vector<uint32_t> Features, Cov;$/;"	m	struct:fuzzer::MergeFileInfo
 FeaturesDir	FuzzerFork.cpp	/^  std::string FeaturesDir;$/;"	m	struct:fuzzer::FuzzJob	file:
 FeaturesDir	FuzzerOptions.h	/^  std::string FeaturesDir;$/;"	m	struct:fuzzer::FuzzingOptions
+File	FuzzerIO.h	/^  std::string File;$/;"	m	struct:fuzzer::SizeFeaturedFile
 File	FuzzerIO.h	/^  std::string File;$/;"	m	struct:fuzzer::SizedFile
 FileSize	FuzzerIOPosix.cpp	/^size_t FileSize(const std::string &Path) {$/;"	f	namespace:fuzzer
 FileSize	FuzzerIOWindows.cpp	/^size_t FileSize(const std::string &Path) {$/;"	f	namespace:fuzzer
@@ -303,9 +316,12 @@ ForEach	FuzzerValueBitMap.h	/^  void ForEach(Callback CB) const {$/;"	f	struct:f
 ForEachNonZeroByte	FuzzerTracePC.h	/^size_t ForEachNonZeroByte(const uint8_t *Begin, const uint8_t *End,$/;"	f	namespace:fuzzer
 ForEachObservedPC	FuzzerTracePC.h	/^  void ForEachObservedPC(CallBack CB) {$/;"	f	class:fuzzer::TracePC
 ForkCorpusGroups	FuzzerOptions.h	/^  bool ForkCorpusGroups = false;$/;"	m	struct:fuzzer::FuzzingOptions
+ForkDifferent	FuzzerOptions.h	/^  bool ForkDifferent = false;$/;"	m	struct:fuzzer::FuzzingOptions
+ForkIsAdaptive	FuzzerOptions.h	/^  bool ForkIsAdaptive = true;$/;"	m	struct:fuzzer::FuzzingOptions
 FreeHook	FuzzerLoop.cpp	/^void FreeHook(const volatile void *ptr) {$/;"	f	namespace:fuzzer
 Frees	FuzzerLoop.cpp	/^  std::atomic<size_t> Frees;$/;"	m	struct:fuzzer::MallocFreeTracer	file:
 FreqOfMostAbundantRareFeature	FuzzerCorpus.h	/^  uint16_t FreqOfMostAbundantRareFeature = 0;$/;"	m	class:fuzzer::InputCorpus
+FtSort	FuzzerIO.h	/^bool FtSort(const struct SizeFeaturedFile & a, const struct SizeFeaturedFile & b)$/;"	f	namespace:fuzzer
 FuncLabels	dataflow/DataFlow.h	/^  dfsan_label *FuncLabels;  \/\/ Array of NumFuncs elements.$/;"	m	struct:CallbackData
 FuncLabelsPerIter	dataflow/DataFlow.cpp	/^static dfsan_label **FuncLabelsPerIter;  \/\/ NumIterations x NumFuncs;$/;"	v	file:
 FunctionWeights	FuzzerDataFlowTrace.cpp	/^std::vector<double> BlockCoverage::FunctionWeights(size_t NumFunctions) const {$/;"	f	class:fuzzer::BlockCoverage
@@ -425,6 +441,8 @@ InterruptHandler	FuzzerUtilPosix.cpp	/^static void InterruptHandler(int, siginfo
 Intervals	FuzzerCorpus.h	/^  std::vector<double> Intervals;$/;"	m	class:fuzzer::InputCorpus
 IsASCII	FuzzerUtil.cpp	/^bool IsASCII(const Unit &U) { return IsASCII(U.data(), U.size()); }$/;"	f	namespace:fuzzer
 IsASCII	FuzzerUtil.cpp	/^bool IsASCII(const uint8_t *Data, size_t Size) {$/;"	f	namespace:fuzzer
+IsAdaptive	FuzzerFork.cpp	/^  bool IsAdaptive = true;$/;"	m	struct:fuzzer::GlobalEnv	file:
+IsBottleneck	FuzzerFork.cpp	/^  bool IsBottleneck = false;$/;"	m	struct:fuzzer::GlobalEnv	file:
 IsDir	FuzzerIOWindows.cpp	/^static bool IsDir(DWORD FileAttrs) {$/;"	f	namespace:fuzzer
 IsDirectory	FuzzerIOPosix.cpp	/^bool IsDirectory(const std::string &Path) {$/;"	f	namespace:fuzzer
 IsDirectory	FuzzerIOWindows.cpp	/^bool IsDirectory(const std::string &Path) {$/;"	f	namespace:fuzzer
@@ -647,6 +665,7 @@ NumModules	FuzzerTracePC.h	/^  size_t NumModules;  \/\/ linker-initialized.$/;"	
 NumOOMs	FuzzerFork.cpp	/^  size_t NumOOMs = 0;$/;"	m	struct:fuzzer::GlobalEnv	file:
 NumPCTables	FuzzerTracePC.h	/^  size_t NumPCTables;$/;"	m	class:fuzzer::TracePC
 NumPCsInPCTables	FuzzerTracePC.h	/^  size_t NumPCsInPCTables;$/;"	m	class:fuzzer::TracePC
+NumParallel	FuzzerFork.cpp	/^  size_t NumParallel = 1;$/;"	m	struct:fuzzer::GlobalEnv	file:
 NumPrintNewFuncs	FuzzerTracePC.h	/^  size_t NumPrintNewFuncs = 0;$/;"	m	class:fuzzer::TracePC
 NumRegions	FuzzerTracePC.h	/^    size_t NumRegions;$/;"	m	struct:fuzzer::TracePC::Module
 NumRuns	FuzzerFork.cpp	/^  size_t NumRuns = 0;$/;"	m	struct:fuzzer::GlobalEnv	file:
@@ -777,6 +796,7 @@ RandBool	FuzzerRandom.h	/^  size_t RandBool() { return this->operator()() % 2; }
 RandCh	FuzzerMutate.cpp	/^static char RandCh(Random &Rand) {$/;"	f	namespace:fuzzer
 Random	FuzzerRandom.h	/^  Random(unsigned int seed) : std::minstd_rand(seed) {}$/;"	f	class:fuzzer::Random
 Random	FuzzerRandom.h	/^class Random : public std::minstd_rand {$/;"	c	namespace:fuzzer
+RareFeatureCounts	FuzzerFork.cpp	/^  std::vector<FeatureCount> RareFeatureCounts;$/;"	m	struct:fuzzer::GlobalEnv	file:
 RareFeatures	FuzzerCorpus.h	/^  std::vector<uint32_t> RareFeatures;$/;"	m	class:fuzzer::InputCorpus
 RawPrint	FuzzerIOPosix.cpp	/^void RawPrint(const char *Str) {$/;"	f	namespace:fuzzer
 RawPrint	FuzzerIOWindows.cpp	/^void RawPrint(const char *Str) {$/;"	f	namespace:fuzzer
@@ -859,16 +879,20 @@ Sha1	FuzzerCorpus.h	/^  uint8_t Sha1[kSHA1NumBytes];  \/\/ Checksum.$/;"	m	struc
 Sha1ToString	FuzzerSHA1.cpp	/^std::string Sha1ToString(const uint8_t Sha1[kSHA1NumBytes]) {$/;"	f	namespace:fuzzer
 Shrink	FuzzerOptions.h	/^  bool Shrink = false;$/;"	m	struct:fuzzer::FuzzingOptions
 ShuffleAtStartUp	FuzzerOptions.h	/^  bool ShuffleAtStartUp = true;$/;"	m	struct:fuzzer::FuzzingOptions
+SiSort	FuzzerIO.h	/^bool SiSort(const struct SizedFile & a, const struct SizedFile & b)$/;"	f	namespace:fuzzer
 SignalHandler	FuzzerUtilFuchsia.cpp	/^std::thread SignalHandler;$/;"	m	namespace:fuzzer::__anon4	file:
 SignalHandlerEvent	FuzzerUtilFuchsia.cpp	/^zx_handle_t SignalHandlerEvent = ZX_HANDLE_INVALID;$/;"	m	namespace:fuzzer::__anon4	file:
 SignalMutex	FuzzerUtilDarwin.cpp	/^static std::mutex SignalMutex;$/;"	m	namespace:fuzzer	file:
 SimpleFastHash	FuzzerUtil.cpp	/^uint64_t SimpleFastHash(const void *Data, size_t Size, uint64_t Initial) {$/;"	f	namespace:fuzzer
 Size	FuzzerDictionary.h	/^  size_t Size = 0;$/;"	m	class:fuzzer::Dictionary
 Size	FuzzerDictionary.h	/^  uint8_t Size = 0;$/;"	m	class:fuzzer::FixedWord
+Size	FuzzerIO.h	/^  size_t Size;$/;"	m	struct:fuzzer::SizeFeaturedFile
 Size	FuzzerIO.h	/^  size_t Size;$/;"	m	struct:fuzzer::SizedFile
 Size	FuzzerMerge.h	/^  size_t Size = 0;$/;"	m	struct:fuzzer::MergeFileInfo
 Size	FuzzerTracePC.h	/^    size_t Size()   { return Stop() - Start(); }$/;"	f	struct:fuzzer::TracePC::Module
 Size	tests/FuzzerUnittest.cpp	/^  size_t Size;$/;"	m	class:PrintfCapture	file:
+SizeFeaturedFile	FuzzerIO.h	/^struct SizeFeaturedFile {$/;"	s	namespace:fuzzer
+SizeFeaturedFiles	FuzzerFork.cpp	/^  std::vector<SizeFeaturedFile> SizeFeaturedFiles;$/;"	m	struct:fuzzer::GlobalEnv	file:
 SizeInBits	FuzzerValueBitMap.h	/^  size_t SizeInBits() const { return kMapSizeInBits; }$/;"	f	struct:fuzzer::ValueBitMap
 SizeInBytes	FuzzerCorpus.h	/^  size_t SizeInBytes() const {$/;"	f	class:fuzzer::InputCorpus
 SizedFile	FuzzerIO.h	/^struct SizedFile {$/;"	s	namespace:fuzzer
@@ -904,6 +928,8 @@ StopSignalHandler	FuzzerUtilFuchsia.cpp	/^void StopSignalHandler() {$/;"	f	names
 StrFlag	FuzzerDriver.cpp	/^  const char **StrFlag;$/;"	m	struct:fuzzer::FlagDescription	file:
 SubAndSquare	tests/FuzzerUnittest.cpp	/^double SubAndSquare(double X, double Y) {$/;"	f
 SuccessCount	FuzzerDictionary.h	/^  size_t SuccessCount = 0;$/;"	m	class:fuzzer::DictionaryEntry
+Suff	FuzzerFork.cpp	/^  size_t Suff = 1;$/;"	m	struct:fuzzer::GlobalEnv	file:
+SumExecs	FuzzerFork.cpp	/^  size_t SumExecs = 0;$/;"	m	struct:fuzzer::GlobalEnv	file:
 SumIncidence	FuzzerCorpus.h	/^  double SumIncidence = 0.0;$/;"	m	struct:fuzzer::InputInfo
 SymbolizeMutex	FuzzerUtil.cpp	/^static std::mutex SymbolizeMutex;$/;"	m	namespace:fuzzer	file:
 TEST	tests/FuzzedDataProviderUnittest.cpp	/^TEST(FuzzedDataProvider, ConsumeBool) {$/;"	f
@@ -1227,6 +1253,7 @@ operator ()	FuzzerRandom.h	/^  typename std::enable_if<std::is_integral<T>::valu
 operator <	FuzzerIO.h	/^  bool operator<(const SizedFile &B) const { return Size < B.Size; }$/;"	f	struct:fuzzer::SizedFile
 operator =	FuzzerCommand.h	/^  Command &operator=(const Command &Other) {$/;"	f	class:fuzzer::final
 operator ==	FuzzerDictionary.h	/^  bool operator==(const FixedWord<kMaxSize> &w) const {$/;"	f	class:fuzzer::FixedWord
+operator ==	FuzzerIO.h	/^  bool operator == (const uint32_t &Feature){$/;"	f	struct:fuzzer::FeatureCount
 operator []	FuzzerCorpus.h	/^  const Unit &operator[] (size_t Idx) const { return Inputs[Idx]->U; }$/;"	f	class:fuzzer::InputCorpus
 operator []	FuzzerDictionary.h	/^  DictionaryEntry & operator[] (size_t Idx) {$/;"	f	class:fuzzer::Dictionary
 output_file	afl/afl_driver.cpp	/^static FILE *output_file = stderr;$/;"	v	file:
