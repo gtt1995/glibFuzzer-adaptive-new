@@ -89,34 +89,6 @@ struct SizedFile {
   bool operator<(const SizedFile &B) const { return Size < B.Size; }
 };
 
-struct SizeFeaturedFile {
-  std::string File;
-  size_t Size;
-  std::vector<uint32_t> Features;
-  bool operator<(const SizeFeaturedFile &B) const { return Features.size() < B.Features.size(); }
-};
-
-/*bool FtSort(const struct SizeFeaturedFile & a, const struct SizeFeaturedFile & b)
-{
-    return a.Features.size() < b.Features.size();
-}*/
-
-/*bool SiSort(const struct SizedFile & a, const struct SizedFile & b)
-{
-    return a.Size < b.Size;
-}*/
-
-struct FeatureCount {
-  uint32_t Feature;
-  size_t Count;
-  /*bool operator == (const FeatureCount &F){
-        return (Feature == F.Feature);
-    }*/
-  bool operator == (const uint32_t &Feature){
-        return (this->Feature == Feature);
-    }
-};
-
 void GetSizedFilesFromDir(const std::string &Dir, std::vector<SizedFile> *V);
 
 char GetSeparator();
